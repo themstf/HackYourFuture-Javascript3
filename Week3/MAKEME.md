@@ -1,84 +1,56 @@
-# Homework Week 3
+# Homework Week 2
 
-```
-Topics discussed this week:
-• Object Oriented Programming and ES6 Classes
-• The this keyword
-• call, apply, bind
-```
+## Part 1 <small>- Reading material</small>
 
-## Step 1: Fix requested changes
+Read the HYF material on this week's topics:
 
-_Deadline Monday_
+- [ ] [try ... catch](https://github.com/HackYourFutureBelgium/fundamentals/blob/master/fundamentals/try_catch.md)
+- [ ] [async & await](https://github.com/HackYourFutureBelgium/fundamentals/blob/master/fundamentals/async_await.md)
+- [ ] [this keyword](https://github.com/HackYourFutureBelgium/fundamentals/blob/master/fundamentals/this.md)
+- [ ] [OOP & ES6 classes](https://github.com/HackYourFutureBelgium/fundamentals/blob/master/fundamentals/oop_classes.md)
 
-- Fix Requested Changes (if any) on the Pull Request.
+## Part 2 <small>- Finish last week's homework</small>
+**Deadline: Tuesday evening**
 
-## Step 2
+This week's homework again builds upon that of last 2 weeks, so if you haven't already, finish that first, by following the [Week 1](../week1/MAKEME.md) and [Week 2](../week2/MAKEME.md) guides, step-by-step. If you want some intermediate comments/review after finishing that, go ahead and send it in with a pull request, as described there. Or you may immediately add this week's work and submit it as a whole.
 
-**_Deadline Thursday_**
+## Part 3 <small>- Setup for this week</small>
+**Deadline: Thursday evening**
 
-### 2.1 Preparation
+Create a new branch based on the `week1` branch:
 
-**Read the fundamental pages on:**
-
-- [try...catch](../../../../fundamentals/blob/master/fundamentals/try_catch.md)
-- [async/await](../../../../fundamentals/blob/master/fundamentals/async_await.md)
-
-The homework for week 3 will build on the work you did in week 2. You will create a new branch based on the `week2` branch.
-
-1. Make sure that you committed all changes in the week 2 version of your homework.
-2. Create a new `week3` branch:
+- [ ] Make sure that you committed all changes of your homework.
+- [ ] Create a new `week3` branch:
 
    ```
    git checkout -b week3
    ```
 
-### 2.2 Assignment
+## Part 4 <small>- This week's assignment</small>
+**Deadline: Tursday evening**
 
-This week you will work with all JavaScript files in the `src` folder. The assignment consists of two parts:
+You will continue to work on the file `index.js`.
 
-1. Refactor all `.then()` and `.catch()` methods with `async`/`await` and `try...catch`.
-2. Make your app ARIA-compliant (see below).
-3. Refactor your application to use ES6 classes.
+- [ ] Refactor all `.then()` and `.catch()` methods with `async`/`await` and `try...catch`.
 
-#### 2.2.1 async/await
+  > *Hint:* Make sure that your error handling code still works. See the [Week 2 guide](../week2/MAKEME.md) on how to force an error response from GitHub.
 
-**Instructions:**
+- [ ] Delcare your own `Repository` and `Contributor` classes. Give them all the properties that you're using in your app.
 
-1. Refactor all `.then()` and `.catch()` methods with `async`/`await` and `try...catch`.
+  > *Hint:* Use proper `camelCalse` for your classes' property names. Don't forget to update any references to these properties in the rest of your code!
 
-2. Make sure that your error handling code still works. See the week2 MAKEME on how to force an error response from GitHub.
+- [ ] Your `Repository` class should also contain 2 methods:
+  - `getContributors`, which fetches and returns an array of its `Contributor`s.
+  - `getFormattedUpdateDate` which returns the properly formatted 'updated at' date and time, which you used during week 1.
 
-#### 2.2.2 ES6 Classes
+- [ ] Your `Contributor` class should also contain a `render` method, which returns the `li` element with all its inner HTML; ready to be added to the `ul` element.
 
-**_Deadline Saturday_**
+- [ ] Always immediately `map` fetched repositories and contributors into instances of these classes, and use their methods throughout your code.
 
-This final assignment requires you to go the extra mile and master Object Oriented Programming and ES6 classes.
+- [ ] Bonus: feel free to add more methods to retrieve or transform more (related) data of these 2 entities.
 
-In this assignment you need to redistribute and adapt the code from `index.js` to the files `App.js`, `Repository.js` and `Contributor.js`. You do not need to modify `Util.js`.
-
-| File             | Description                                                                                                                                                                                                        |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `index2.html`    | You should load this HTML file in your browser instead of `index.html` to work with the classes version of your homework. It loads the following JavaScript files through `<script>` tags in the `<body>` element: |
-| `App.js`         | The `App` class contains the start-up code and manages the overall orchestration of the app.                                                                                                                       |
-| `Repository.js`  | The `Repository` class holds code and data for a single repository.                                                                                                                                                |
-| `Contributor.js` | The `Contributor` class holds code and data for a single contributor.                                                                                                                                              |
-| `Util.js`        | The `Util` class contains static helper methods for use in the other classes.                                                                                                                                      |
-
-The `App.js`, `Repository.js` and `Contributor.js` files each contain skeleton code that you can use to migrate portions of your code from `index.js` to.
-
-_Read:_
-
-- HYF fundamental: [ES6 Classes](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/oop_classes.md#es6-classes)
-- More on ES6 classes: [ES6 Classes in Depth](https://ponyfoo.com/articles/es6-classes-in-depth)
-
-#### 2.2.3 ARIA-compliance (BONUS)
-
-Please review the material from the HTML/CSS module: [Get familiar with Accessible Rich Internet Applications (ARIA)](https://github.com/HackYourFuture/HTML-CSS/tree/master/Week1#get-familiar-with-accessible-rich-internet-applications-aria).
-
-For the GitHub application ARIA-compliance means that the Contributors list should either be a native HTML list (i.e. using `ul` and `li` elements) or otherwise marked with an appropriate ARIA **role**. Furthermore, a user should be able to navigate through all interactive elements using the keyboard (e.g., using the **Tab** key). Pressing **Enter** on such an element should be equivalent to clicking the mouse.
-
-#### 2.2.4 Handing in your homework
+## Part 5 <small>- Handing in your homework</small>
+**Deadline: Thursday evening**
 
 If necessary, review the instructions how to [Hand in homework](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/homework_pr.md) using GitHub pull request.
 
@@ -106,30 +78,12 @@ If the answer is 'yes' to the preceding questions you are ready to follow these 
 
 2. Create a pull request for your `week3` branch.
 
-## Step 3: Read before next lecture
+Note:
 
-_Deadline Sunday morning_
+1. Please remove all redundant, commented-out code and console.log's from your files before pushing your homework as finished. There is no need for your mentors to review this stuff.
+2. Please make sure your code is well-formatted and follows the recommended naming conventions.
+
+## Part 6 <small>- Prepare for the next module</small>
+**Deadline: Before the start of the Node module**
 
 Go trough the reading material in the [README.md](https://github.com/HackYourFuture/Node.js) of the Node repository to prepare for your next class.
-
-## Alternative _BONUS_ : Code Kata Race
-
-If you haven't already join our clan: "Hack Your Future" in codewars
-
-Solve the following problems:
-
-- [Problem 1](https://www.codewars.com/kata/keep-up-the-hoop)
-- [Problem 2](https://www.codewars.com/kata/find-the-first-non-consecutive-number)
-- [Problem 3](https://www.codewars.com/kata/negation-of-a-value)
-- Some more [Homework](https://www.codewars.com/collections/hyf-homework-1)
-
-_Hints_
-
-- Hint for Q1: split your code into two parts, one part for the case that one of the two strings has an extra letter at the start or the end but is otherwise identical & one part for the case that the strings are the same length but one character is different in one of the strings
-- Also for Q1 this function on strings might be useful: [JavaScript String slice() method](https://www.w3schools.com/jsref/jsref_slice_string.asp)
-- Also potentially useful: [JavaScript String charAt() Method](https://www.w3schools.com/jsref/jsref_charat.asp)
-- [Hint for Q2](https://www.w3schools.com/jsref/jsref_sort.asp) Also there are no sample tests, you need to use submit
-
-Remember the person with the most kata points gets a prize from Gijs (and you can do exercises on this website without us assigning them - anything kyu 7 or kyu 8 you can try to do - kyu 6 or lower is probably too hard) -->
-
--[MORE BONUS](https://www.codewars.com/collections/hyf-homework-1-bonus-credit) :collision:
